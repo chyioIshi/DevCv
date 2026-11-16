@@ -16,7 +16,13 @@
 \else
   \usepackage{fontspec}
   \defaultfontfeatures{Ligatures=TeX}
-  \setmainfont{Libertinus Serif}
+  \setmainfont{LibertinusSerif}[
+    Extension = .otf,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+  ]
 \fi
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -158,7 +164,7 @@
 
         Сейчас работаю в \textbf{Ozon}, занимаюсь разработкой автотестов и поддержкой тестовой инфраструктуры для внутренней платформы профиля сотрудника.
         Ранее в \textbf{Альфа-Банке} с нуля разработал \textbf{Python-экосистему тестирования, включающую API/UI-фреймворки, mock-сервис (FastAPI), CI/CD-пайплайн
-        и модель автотестов (~1200 тестов)} для интеграционного тестирования микросервисной архитектуры.}
+         и около 1200 автотестов} для интеграционного тестирования микросервисной архитектуры.}
     \resumeSubHeadingListEnd
 
 \section{Technical Stack}
@@ -188,7 +194,10 @@ Git, GitLab CI, Jenkins, Docker, Kubernetes, OpenShift, Helm, uv \\
 ELK Stack, Kibana, Prometheus, Grafana \\
 
 \textbf{Architecture:}
-Microservices, SOA, Event-Driven Architecture, Distributed Systems
+Microservices, SOA, Event-Driven Architecture, Distributed Systems \\
+
+\textbf{AI Development \& Agentic Systems:}
+Claude Code, OpenCode, Agent Skills, Subagents, Multi-Agent Orchestration, Context Engineering, MCP
 
 }}
 \end{itemize}
@@ -203,21 +212,23 @@ Microservices, SOA, Event-Driven Architecture, Distributed Systems
 
         \resumeItemListStart
 
-            \resumeItem{\textbf{Проект:} Профиль сотрудника -- кластер backend сервисов, предоставляющих доступ для управления профилями сотрудников, финансовой информацией, сменами, данными о курсах и статусными моделями.}
+            \resumeItem{\textbf{Проект:} Профиль сотрудника Ozon Job -- кластер backend-сервисов для управления профилями сотрудников, финансовой информацией, сменами, данными о курсах и статусными моделями.}
 
-            \resumeItem{Разрабатываю и поддерживаю end-to-end, API и интеграционные тесты с использованием Python, pytest и внутреннего фреймворка Nuke.}
+            \resumeItem{Разрабатываю API, интеграционные и end-to-end тесты на Python/pytest/Nuke, автоматизирую регрессию; развиваю тестовый фреймворк и повышаю поддерживаемость тестового кода.}
 
-            \resumeItem{Развиваю существующий фреймворк автоматизированного тестирования и улучшаю поддерживаемость тестового кода.}
+            \resumeItem{Проектирую и реализую интеграционные сценарии для распределённых backend-сервисов, взаимодействующих через gRPC, REST API и Kafka.}
 
-            \resumeItem{Автоматизирую регрессионное тестирование новой функциональности.}
+            \resumeItem{Исследую дефекты и сбои тестов в среде Kubernetes с использованием GitLab CI, Valkey и шардированного PostgreSQL; анализирую причины и взаимодействую с разработчиками при устранении проблем.}
 
-            \resumeItem{Проектирую и реализую интеграционные тесты для сервисов, преимущественно взаимодействующих через gRPC, а также REST API и Kafka.}
+            \resumeItem{Спроектировал и внедрил в команде мультиагентный workflow на базе Claude Code и OpenCode: настроил оркестратор и субагентов для анализа документации и MR разработчиков, проектирования тестов, подготовки моков, реализации, ревью кода и проверки покрытия требований с передачей артефактов между этапами.}
 
-            \resumeItem{Исследую дефекты и проблемы на тестовых окружениях, провожу первичный анализ причин и взаимодействовую с разработчиками для их устранения.}
+            \resumeItem{Разработал Memory Bank на основе Markdown-артефактов для сохранения знаний, передачи контекста между агентами и повторного использования анализа; настроил Agent Skills и субагентов для исследования кода сервисов, логов и поиска информации в Confluence/Jira.}
 
-            \resumeItem{Работаю с \textbf{Kubernetes}, \textbf{GitLab CI}, \textbf{Valkey}, \textbf{шардированным PostgreSQL} при проверке поведения распределенной системы.}
+            \resumeItem{Ускорил ревью автотестов: на основе замечаний из \textbf{600+ MR} сформировал правила по категориям и серьёзности (minor, medium, major); разработал скилл, принимающий ссылку на GitLab MR и параллельно запускающий субагентов для проверки отдельных категорий правил.}
 
-            \resumeItem{Участвую в проверке функциональности на разных этапах разработки, поддерживая стабильную поставку новых изменений.}
+            \resumeItem{Разработал скилл анализа ночных прогонов: по ссылке на сообщение в корпоративном мессенджере получает результаты TMS/GitLab CI, разбирает падения и flaky-тесты, исследует логи по trace ID из артефактов; проверяет дубли в эпике техдолга, предлагает черновики задач с рекомендациями по исправлению и публикует отчёт в установленном формате.}
+
+            \resumeItem{Участвую в еженедельных инженерных дежурствах: анализирую ночные прогоны автотестов, помогаю смежным командам готовить тестовые данные, консультирую по поведению сервисов и решаю задачи технического долга.}
 
         \resumeItemListEnd
 
@@ -228,27 +239,21 @@ Microservices, SOA, Event-Driven Architecture, Distributed Systems
 
         \resumeItemListStart
 
-            \resumeItem{\textbf{Проект:} кластер UI/API сервисов, взаимодействующих через REST API, Kafka, внутренние сервисы и
-            осуществляющих поддержку создания и проведения и получения информации о сделках (расчётные и процентные форварды, свопы, споты) для ЮЛ.}
+            \resumeItem{\textbf{Проект:} платформа валютных деривативов для юридических лиц: создание, проведение и просмотр форвардов, свопов и спот-сделок; UI/API-сервисы взаимодействуют через REST API, Kafka и внутренние сервисы.}
 
-            \resumeItem{Разработал mock-сервис на FastAPI для эмуляции внешних систем, что позволило проводить изолированное интеграционное тестирование и гибко покрывать негативные сценарии.}
+            \resumeItem{С нуля разработал \textbf{Python-фреймворк} для API, интеграционного и UI-тестирования микросервисной платформы.}
+
+            \resumeItem{Разработал mock-сервис на FastAPI для эмуляции внешних систем, изолированного интеграционного тестирования и проверки негативных сценариев.}
 
             \resumeItem{Создал внутренний Python-сервис (Zeep, SOAP, REST API, MongoDB) для автоматизированной подготовки тестовых пользователей через ESB, сократив время подготовки тестовых данных с \textbf{1--2 дней примерно до 10 минут}.}
 
             \resumeItem{Построил \textbf{CI/CD-пайплайн на Groovy (Jenkins)} для запуска автотестов, публикации отчётов Allure и интеграции тестирования в процесс поставки релизов.}
 
-            \resumeItem{С нуля разработал \textbf{фреймворк автоматизации тестирования} для API, интеграционного и UI-тестирования микросервисной архитектуры.}
-
             \resumeItem{Автоматизировал \textbf{до 90\% тестов новой функциональности}, включая \textbf{интеграционные, контрактные и UI-тесты}.}
 
             \resumeItem{Разработал стандарт структурированного логирования сервисов (JSON logs, trace-id, request/response metadata), что ускорило локализацию дефектов.}
 
-            \resumeItem{Выполнял диагностику проблем системы с использованием \textbf{ELK, Kibana, Prometheus и Grafana}.}
-
-            \resumeItem{Работал с \textbf{Kubernetes} (pods, services, ingresses, deployments, network policies, ansible-скрипты, Helm Charts) при анализе микросервисов на 
-            тестовых стендах.}
-
-            \resumeItem{Активно участвовал в \textbf{Shift Left Testing}, анализируя требования и архитектуру ещё до начала разработки.}
+            \resumeItem{Диагностировал распределённые сервисы на тестовых стендах: \textbf{ELK, Kibana, Prometheus, Grafana, Kubernetes} (Pods, Services, Ingresses, Deployments, Network Policies, Helm Charts).}
 
         \resumeItemListEnd
 
@@ -259,18 +264,15 @@ Microservices, SOA, Event-Driven Architecture, Distributed Systems
 
         \resumeItemListStart
 
-            \resumeItem{\textbf{Проект:} Виртуальный голосовой помощник «Салют» в сфере инвестиций и накоплений - позволяет клиенту проводить активные операции
-            голосом, получать персональные консультации по сложным инвестиционнонакопительным продуктам с использованием AI-моделей и интеграцией с GigaChat.}
+            \resumeItem{\textbf{Проект:} голосовой помощник «Салют» для инвестиций и накоплений: операции голосом и персональные консультации с использованием AI-моделей, GigaChat и внутренних банковских сервисов.}
 
-            \resumeItem{Увеличил тестовое покрытие системы \textbf{с 65\% до 80\%}, разработав дополнительные \textbf{модульные и интеграционные тесты}.}
+            \resumeItem{Увеличил тестовое покрытие системы \textbf{с 65\% до 80\%}, разработав дополнительные \textbf{модульные и интеграционные тесты}, в том числе для микросервисов, взаимодействующих через \textbf{Kafka и REST API}.}
 
             \resumeItem{Провёл \textbf{рефакторинг тестового фреймворка}, внедрив паттерны проектирования и повысив поддерживаемость тестового кода.}
 
             \resumeItem{Автоматизировал тестирование \textbf{AI-модели классификации пользовательских намерений}, обнаружив критический дефект между моделями DEV и PROD.}
 
             \resumeItem{Повысил уровень автоматизации \textbf{с 60\% до 90\%}, существенно ускорив прохождение регрессионного тестирования.}
-
-            \resumeItem{Разработал \textbf{интеграционные тесты для микросервисов}, взаимодействующих через \textbf{Kafka и REST API}.}
 
             \resumeItem{Менторил junior QA и стажёров в области \textbf{автоматизации тестирования и CI/CD-процессов}.}
 
@@ -285,6 +287,25 @@ Microservices, SOA, Event-Driven Architecture, Distributed Systems
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
+{\textbf{DevGate}
+\href{https://github.com/chyioIshi/DevGate}{\raisebox{0.2ex}{\footnotesize\faGithub}}
+$|$
+\emph{Go, Redis, Prometheus}}
+{}
+
+\resumeItemListStart
+
+\resumeItem{Реализовал API Gateway/Load Balancer на Go: HTTP reverse proxy с потоковой передачей данных и маршрутизацией по пути, методу, хосту и заголовкам запроса.}
+
+\resumeItem{Реализовал балансировку round-robin, random и least-requests, DNS discovery и активные/пассивные health checks с исключением недоступных backend-сервисов из балансировки.}
+
+\resumeItem{Реализовал retries с exponential backoff и jitter для GET/HEAD-запросов без тела при транспортных ошибках, circuit breaker и graceful shutdown.}
+
+\resumeItem{Разработал распределённый token-bucket rate limiter на Redis: атомарный Lua-скрипт и серверное время; добавил Prometheus-метрики HTTP-запросов, rate limiting и состояния upstream-сервисов.}
+
+\resumeItemListEnd
+
+\resumeProjectHeading
 {\textbf{DevMirror}
 \href{https://github.com/chyioIshi/DevMirror}{\raisebox{0.2ex}{\footnotesize\faGithub}}
 $|$
@@ -293,7 +314,7 @@ $|$
 
 \resumeItemListStart
 
-\resumeItem{Спроектировал и реализовал универсальный mock-сервис для интеграционного тестирования распределенных микросервисных систем.}
+\resumeItem{Спроектировал и реализовал mock-сервис для интеграционного тестирования распределённых микросервисов.}
 
 \resumeItem{Разработал сервис с применением принципов DDD и Clean Architecture.}
 
@@ -301,7 +322,7 @@ $|$
 
 \resumeItem{Разработал расширяемый side-effect engine с поддержкой HTTP callbacks, PostgreSQL, MongoDB, Redis и Kafka providers.}
 
-\resumeItem{Реализовал CI-пайплайн в GitHub Actions с ruff/mypy linting и unit/integration тестами.}
+\resumeItem{Реализовал CI в GitHub Actions: Ruff (линтинг, форматирование), mypy, unit-тесты и отчёты о покрытии.}
 
 \resumeItemListEnd
 

@@ -39,6 +39,7 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.1pt}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
@@ -140,18 +141,13 @@ Moscow, Russia \textbullet\ Open to Relocation
 
 \section{Summary}
     \resumeSubHeadingListStart
-        {QA Automation Engineer / SDET with 3+ years of experience developing automated
-        testing frameworks, testing infrastructure and integration testing solutions
-        for distributed microservice platforms.
-        
-        Specialized in Python automation, REST API, gRPC, Kafka, Kubernetes,
-        CI/CD and test infrastructure development.
-        
-        Currently working as a Senior QA Automation Engineer at Ozon.
-        Previously designed and implemented a Python-based testing ecosystem
-        including API/UI frameworks, FastAPI mock services,
-        CI/CD pipelines and more than 1,200 automated tests
-        for a microservice architecture at Alfa-Bank.}
+        \item{\textbf{QA Automation Engineer / SDET} with \textbf{3+ years of experience developing automated tests and testing tools for microservice platforms}.
+        Specialize in \textbf{Python automation}, \textbf{API testing}, \textbf{UI testing}, and \textbf{test infrastructure development}.
+        Work in \textbf{product teams}.
+
+        Currently at \textbf{Ozon}, developing automated tests and maintaining test infrastructure for the internal employee profile platform.
+        Previously built a \textbf{Python testing ecosystem from scratch at Alfa-Bank, including API/UI frameworks, a FastAPI mock service, a CI/CD pipeline,
+        and approximately 1,200 automated tests} for microservice integration testing.}
     \resumeSubHeadingListEnd
 
 \section{Technical Skills}
@@ -181,7 +177,10 @@ Git, GitLab CI, Jenkins, Docker, Kubernetes, OpenShift, Helm, uv \\
 ELK Stack, Kibana, Prometheus, Grafana \\
 
 \textbf{Architecture:}
-Microservices, SOA, Event-Driven Architecture, Distributed Systems
+Microservices, SOA, Event-Driven Architecture, Distributed Systems \\
+
+\textbf{AI Development \& Agentic Systems:}
+Claude Code, OpenCode, Agent Skills, Subagents, Multi-Agent Orchestration, Context Engineering, MCP
 
 }}
 \end{itemize}
@@ -196,21 +195,23 @@ Microservices, SOA, Event-Driven Architecture, Distributed Systems
 
         \resumeItemListStart
 
-            \resumeItem{\textbf{Project:} Employee Profile — distributed platform responsible for employee profile management, financial information, shifts, courses data and status models. Built on gRPC, REST APIs, Kafka, Kubernetes and sharded PostgreSQL.}
+            \resumeItem{\textbf{Project:} Employee Profile Ozon Job -- a cluster of backend services for managing employee profiles, financial information, shifts, course data, and status models.}
 
-            \resumeItem{Develop and maintain end-to-end, API and integration tests using Python, pytest and the company's internal Nuke testing framework.}
+            \resumeItem{Develop API, integration, and end-to-end tests using Python/pytest/Nuke and automate regression testing; extend the test framework and improve test code maintainability.}
             
-            \resumeItem{Extend the existing automation framework, improving maintainability, readability and long-term scalability of the test suite.}
+            \resumeItem{Design and implement integration scenarios for distributed backend services communicating through gRPC, REST APIs, and Kafka.}
             
-            \resumeItem{Automate regression testing for newly delivered platform functionality, reducing manual testing effort.}
+            \resumeItem{Investigate defects and test failures in Kubernetes environments using GitLab CI, Valkey, and sharded PostgreSQL; analyze causes and collaborate with developers on resolution.}
             
-            \resumeItem{Design and implement integration tests for services communicating through REST APIs, gRPC and Kafka.}
+            \resumeItem{Designed and introduced a multi-agent workflow using Claude Code and OpenCode: configured an orchestrator and subagents for documentation and developer MR analysis, test design, mock preparation, implementation, code review, and requirements coverage review, passing artifacts between stages.}
             
-            \resumeItem{Investigate failures in distributed test environments, perform root cause analysis and collaborate closely with developers to resolve issues.}
+            \resumeItem{Developed a Memory Bank using Markdown artifacts to preserve knowledge, transfer context between agents, and reuse analysis; configured Agent Skills and subagents for service code and log analysis and information retrieval from Confluence/Jira.}
             
-            \resumeItem{Validate distributed system behavior using Kubernetes, GitLab CI, Valkey and sharded PostgreSQL databases.}
-            
-            \resumeItem{Participate throughout the software development lifecycle to ensure reliable delivery of new platform functionality.}
+            \resumeItem{Accelerated test code reviews: derived rules by category and severity (minor, medium, major) from comments on \textbf{600+ MRs}; developed a skill that accepts a GitLab MR URL and launches parallel subagents to check individual rule categories.}
+
+            \resumeItem{Developed a nightly test-run analysis skill: retrieves TMS/GitLab CI results from a corporate messenger message URL, analyzes failures and flaky tests, and investigates logs using trace IDs from artifacts; checks the technical debt epic for duplicates, proposes draft tickets with recommended fixes, and publishes a report in the prescribed format.}
+
+            \resumeItem{Participate in weekly engineering support rotations: analyze nightly automated test runs, help adjacent teams prepare test data, advise on service behavior, and address technical debt.}
 
         \resumeItemListEnd
 
@@ -221,25 +222,21 @@ Microservices, SOA, Event-Driven Architecture, Distributed Systems
         
         \resumeItemListStart
         
-            \resumeItem{\textbf{Project:} Distributed foreign exchange derivatives platform supporting forwards, swaps and spot transactions for corporate customers. Microservice architecture built around REST APIs, Kafka and Kubernetes.}
+            \resumeItem{\textbf{Project:} Foreign exchange derivatives platform for corporate customers: creation, execution, and viewing of forwards, swaps, and spot transactions; UI/API services communicate through REST APIs, Kafka, and internal services.}
+
+            \resumeItem{Built a \textbf{Python test automation framework from scratch} for API, integration, and UI testing of a microservice platform.}
             
-            \resumeItem{Developed a FastAPI-based mock service for emulating external systems, enabling isolated integration testing and flexible negative testing scenarios.}
+            \resumeItem{Developed a FastAPI mock service for external system emulation, isolated integration testing, and negative testing scenarios.}
             
             \resumeItem{Built an internal Python service (Zeep, SOAP, REST API, MongoDB) for automated test user provisioning through the ESB, reducing test data preparation time from \textbf{1--2 days to approximately 10 minutes}.}
             
-            \resumeItem{Designed and implemented a Jenkins CI/CD pipeline (Groovy) for automated test execution, Allure reporting and release validation.}
+            \resumeItem{Built a \textbf{Jenkins CI/CD pipeline in Groovy} for automated test execution, Allure reporting, and integration of testing into the release delivery process.}
             
-            \resumeItem{Built from scratch a Python automation framework supporting API, integration and UI testing for a distributed microservice platform.}
+            \resumeItem{Automated up to \textbf{90\% of tests for new functionality}, including integration, contract, and UI tests.}
             
-            \resumeItem{Automated up to \textbf{90\%} of testing for newly developed functionality, including integration, contract and UI test suites.}
+            \resumeItem{Developed a structured service logging standard using JSON logs, trace IDs, and request/response metadata, accelerating defect investigation.}
             
-            \resumeItem{Introduced structured JSON logging with trace identifiers and request metadata, significantly simplifying defect investigation and troubleshooting.}
-            
-            \resumeItem{Performed production issue analysis using ELK Stack, Kibana, Prometheus and Grafana.}
-            
-            \resumeItem{Worked extensively with Kubernetes, including Pods, Services, Deployments, Ingresses, Helm Charts and log analysis during system validation and incident investigation.}
-            
-            \resumeItem{Applied Shift Left Testing practices by reviewing business requirements and technical designs before implementation.}
+            \resumeItem{Diagnosed distributed services in test environments using \textbf{ELK, Kibana, Prometheus, Grafana, and Kubernetes} (Pods, Services, Ingresses, Deployments, Network Policies, Helm Charts).}
         
         \resumeItemListEnd
 
@@ -250,17 +247,15 @@ Microservices, SOA, Event-Driven Architecture, Distributed Systems
         
         \resumeItemListStart
         
-            \resumeItem{\textbf{Project:} AI-powered virtual assistant for investment and savings products integrated with GigaChat and internal banking services.}
+            \resumeItem{\textbf{Project:} Salute voice assistant for investment and savings products: voice-driven transactions and personalized advice using AI models, GigaChat, and internal banking services.}
             
-            \resumeItem{Increased automated test coverage from \textbf{65\% to 80\%} by developing additional unit and integration tests.}
+            \resumeItem{Increased system test coverage from \textbf{65\% to 80\%} by developing additional \textbf{unit and integration tests}, including tests for microservices communicating through \textbf{Kafka and REST APIs}.}
             
-            \resumeItem{Refactored the existing automation framework using software design patterns, improving maintainability and reducing technical debt.}
+            \resumeItem{Refactored the test automation framework using software design patterns, improving test code maintainability.}
             
-            \resumeItem{Automated validation of an AI intent-classification model, identifying a critical discrepancy between DEV and PROD environments before release.}
+            \resumeItem{Automated testing of an \textbf{AI intent-classification model}, identifying a critical discrepancy between the DEV and PROD models.}
             
-            \resumeItem{Increased overall automation coverage from \textbf{60\% to 90\%}, significantly reducing regression testing time.}
-            
-            \resumeItem{Developed integration tests for microservices communicating through Kafka and REST APIs.}
+            \resumeItem{Increased the level of test automation from \textbf{60\% to 90\%}, substantially accelerating regression testing.}
             
             \resumeItem{Mentored junior QA engineers and interns in test automation and CI/CD practices.}
         
@@ -285,6 +280,25 @@ Microservices, SOA, Event-Driven Architecture, Distributed Systems
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
+{\textbf{DevGate}
+\href{https://github.com/chyioIshi/DevGate}{\raisebox{0.2ex}{\footnotesize\faGithub}}
+$|$
+\emph{Go, Redis, Prometheus}}
+{}
+
+\resumeItemListStart
+
+\resumeItem{Developed an API Gateway / Load Balancer in Go: a streaming HTTP reverse proxy with routing by request path, method, host, and headers.}
+
+\resumeItem{Implemented round-robin, random, and least-requests load balancing, DNS discovery, and active/passive health checks that exclude unavailable backends from request selection.}
+
+\resumeItem{Implemented retries with exponential backoff and jitter for bodyless GET/HEAD requests on transport errors, a circuit breaker, and graceful shutdown.}
+
+\resumeItem{Developed a distributed Redis-backed token-bucket rate limiter using an atomic Lua script and server time; added Prometheus metrics for HTTP requests, rate limiting, and upstream health.}
+
+\resumeItemListEnd
+
+\resumeProjectHeading
 {\textbf{DevMirror}
 \href{https://github.com/chyioIshi/DevMirror}{\raisebox{0.2ex}{\footnotesize\faGithub}}
 $|$
@@ -293,7 +307,7 @@ $|$
 
 \resumeItemListStart
 
-\resumeItem{Designed and implemented a universal mock service for integration testing of distributed microservice systems.}
+\resumeItem{Designed and implemented a mock service for integration testing of distributed microservices.}
 
 \resumeItem{Built using Domain-Driven Design (DDD) and Clean Architecture principles.}
 
@@ -301,7 +315,7 @@ $|$
 
 \resumeItem{Developed an extensible side-effect engine supporting HTTP callbacks, PostgreSQL, MongoDB, Redis and Kafka providers.}
 
-\resumeItem{Implemented GitHub Actions CI pipeline with Ruff linting and automated validation.}
+\resumeItem{Implemented GitHub Actions CI with Ruff linting and format checks, mypy, unit tests, and coverage reports.}
 
 \resumeItemListEnd
 
