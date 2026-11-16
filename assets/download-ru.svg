@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="192" viewBox="0 0 680 192" role="img" aria-labelledby="title desc">
+  <title id="title">Скачать резюме — русский PDF</title>
+  <desc id="desc">Мультяшная кнопка с персонажем-листом резюме, стрелкой скачивания и жёлтым фоном.</desc>
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#ffe49a"/><stop offset="1" stop-color="#f3bc55"/></linearGradient>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#9c6229" opacity=".12"/></pattern>
+  </defs>
+  <g stroke="#29241f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="12" y="15" width="658" height="168" rx="27" fill="#29241f"/>
+    <rect x="6" y="6" width="658" height="168" rx="27" fill="url(#bg)"/>
+  </g>
+  <rect x="9" y="9" width="652" height="162" rx="24" fill="url(#dots)"/>
+  <path d="M30 18H631" stroke="#fff2ce" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+  <circle cx="92" cy="89" r="68" fill="#fff4c9" opacity=".45"/>
+  <g transform="translate(40 28) rotate(-7 48 61)" stroke="#29241f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M22 119l-8 14H39m30-14l4 15h19" fill="none"/>
+    <path d="M5 70l-13 9-8-10m103-3l14-11 3-11" fill="none"/>
+    <path d="M11 8H69L90 30V119H11Z" fill="#b77e4b"/>
+    <path d="M5 2H63L84 24V113H5Z" fill="#fff9e9"/>
+    <path d="M63 2V24H84" fill="#b6d5cd"/>
+    <rect x="17" y="15" width="32" height="16" rx="5" fill="#5e8d81" stroke-width="3"/>
+    <path d="M24 48v6m33-6v6" stroke-width="6"/>
+    <path d="M32 65q11 12 22-1" fill="none" stroke-width="3"/>
+    <path d="M19 86H68M19 97H54" stroke="#bcae94" stroke-width="3"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="43" letter-spacing="-1.5" stroke="#29241f" stroke-width="8" stroke-linejoin="round" paint-order="stroke fill">
+    <text x="165" y="77" fill="#29241f" transform="translate(3 5)">Скачать резюме</text>
+    <text x="165" y="77" fill="#fffdf4">Скачать резюме</text>
+  </g>
+  <g transform="translate(165 99) rotate(-1)">
+    <rect x="3" y="5" width="267" height="42" rx="13" fill="#29241f"/>
+    <rect width="267" height="42" rx="13" fill="#d66c62" stroke="#29241f" stroke-width="4"/>
+    <text x="133" y="28" text-anchor="middle" fill="#fff9ec" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" letter-spacing="1">РУССКИЙ · PDF</text>
+  </g>
+  <g stroke="#29241f" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M574 101V126H562L590 151L618 126H606V101Z" fill="#29241f" transform="translate(3 4)"/>
+    <path d="M574 96V121H562L590 146L618 121H606V96Z" fill="#5e8d81"/>
+    <path d="M555 146V155H626V146" fill="none"/>
+  </g>
+  <path d="M635 33v12m-6-6h12M148 126v8m-4-4h8" stroke="#a36a32" stroke-width="3" stroke-linecap="round"/>
+</svg>
